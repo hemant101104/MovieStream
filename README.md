@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Movie Streaming Platform - Video Selection Guide
 
 ## How to Select Videos
@@ -56,3 +57,8 @@ You can test with these sample video URLs:
 =======
 # MovieStream
 >>>>>>> 60e6f1d14c8abdcbd469b3679fc8bbbbf7defc5d
+=======
+# MovieStream
+
+This is my movie streaming project.
+>>>>>>> c3999f2d305693159e6a445bc9f71e97fb9358ce
