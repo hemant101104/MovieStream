@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Movie Streaming Platform - Video Selection Guide
 
 ## How to Select Videos
@@ -52,3 +53,6 @@ You can test with these sample video URLs:
 2. Share the room code with friends
 3. Upload a video or add a video URL
 4. Enjoy watching together!
+=======
+# MovieStream
+>>>>>>> 60e6f1d14c8abdcbd469b3679fc8bbbbf7defc5d
