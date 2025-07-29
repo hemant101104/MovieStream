@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1752520142641",
+    "username": "hemant10",
+    "email": "socialhemat1011@gmail.com",
+    "password": "$2a$10$1rYkjJsw8Mr1vSYRNkf0x.OXeYc34EQzEYv6GlZUa88m35gLlhtWq",
+    "createdAt": "2025-07-14T19:09:02.641Z"
+  },
+  {
+    "id": "1752520721232",
+    "username": "Manav10",
+    "email": "manav10@gmail.com",
+    "password": "$2a$10$AWM.wz/J1t3KK3qkUkT/2uLVcT/1MUSVZqMhTIKKK7fQizYFob9qy",
+    "createdAt": "2025-07-14T19:18:41.232Z"
+  }
+]
