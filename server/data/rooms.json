@@ -230,7 +230,14 @@
     "hostId": "1763933237274",
     "hostUsername": "bogambo_",
     "isPrivate": false,
-    "participants": [],
+    "participants": [
+      {
+        "id": "1763933237274",
+        "username": "bogambo_",
+        "email": "bogambo10@gmail.com",
+        "socketId": "0gCiHKNsBN8wjCsTAAAB"
+      }
+    ],
     "currentVideo": null,
     "videoState": {
       "playing": false,
