@@ -19,6 +19,11 @@ const CreateRoomModal: React.FC<CreateRoomModalProps> = ({ isOpen, onClose, onRo
     e.preventDefault();
     setLoading(true);
     setError('');
+    if (!token) {
+      setError('You must be signed in to create a room');
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch('http://localhost:3001/api/rooms', {
@@ -35,8 +40,13 @@ const CreateRoomModal: React.FC<CreateRoomModalProps> = ({ isOpen, onClose, onRo
         onRoomCreated(room.code);
         onClose();
       } else {
-        const error = await response.json();
-        setError(error.message);
+        // Try to parse JSON error message, fallback to generic
+        try {
+          const error = await response.json();
+          setError(error.message || 'Failed to create room');
+        } catch {
+          setError('Failed to create room');
+        }
       }
     } catch (err) {
       setError('Failed to create room');

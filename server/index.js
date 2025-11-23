@@ -57,14 +57,11 @@ const authenticateToken = (req, res, next) => {
   const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
-if (JWT_SECRET === 'dev-secret' && process.env.NODE_ENV === 'production') {
-  console.warn('WARNING: Using default JWT secret in production. Set process.env.JWT_SECRET to a strong value.');
-}
+    return res.status(401).json({ message: 'No token provided' });
   }
 
   jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
+    if (err) return res.status(403).json({ message: 'Invalid or expired token' });
     req.user = user;
     next();
   });
