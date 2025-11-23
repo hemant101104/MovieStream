@@ -26,4 +26,9 @@ Notes
 - Add a `.env` file (and ignore it) to store secrets for local development.
 - See `server/index.js` for CORS and static-serving behavior.
 
+NPM production note
+
+- The `--production` flag is deprecated in recent npm versions and prints a warning: `npm WARN config production Use "--omit=dev" instead.`
+- To avoid that warning and to omit dev dependencies in production installs, prefer `npm ci --omit=dev` or add a project `.npmrc` with `omit=dev` (this repo includes one).
+
 If you'd like, I can add Dockerfiles and a CI workflow to build and deploy this app.
