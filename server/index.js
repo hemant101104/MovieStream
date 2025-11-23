@@ -25,7 +25,7 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = 'your-secret-key';
+const JWT_SECRET = 'a9be912415dd54fe5ae6dfbf6a5bd59331f1a5525163bfbb551eda57fb4edc66bc91bad8719c824e6a1d4903e0a24a38a882639de2029c9dcfd1dd09ab3414d3';
 const DATA_DIR = join(__dirname, 'data');
 const USERS_FILE = join(DATA_DIR, 'users.json');
 const ROOMS_FILE = join(DATA_DIR, 'rooms.json');
@@ -36,6 +36,8 @@ if (!existsSync(DATA_DIR)) {
 }
 
 // Initialize data files
+import dotenv from 'dotenv';
+dotenv.config();
 if (!existsSync(USERS_FILE)) {
   writeFileSync(USERS_FILE, JSON.stringify([]));
 }
@@ -55,7 +57,10 @@ const authenticateToken = (req, res, next) => {
   const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
-    return res.sendStatus(401);
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
+if (JWT_SECRET === 'dev-secret' && process.env.NODE_ENV === 'production') {
+  console.warn('WARNING: Using default JWT secret in production. Set process.env.JWT_SECRET to a strong value.');
+}
   }
 
   jwt.verify(token, JWT_SECRET, (err, user) => {

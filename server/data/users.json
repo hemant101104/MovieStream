@@ -12,5 +12,12 @@
     "email": "manav10@gmail.com",
     "password": "$2a$10$AWM.wz/J1t3KK3qkUkT/2uLVcT/1MUSVZqMhTIKKK7fQizYFob9qy",
     "createdAt": "2025-07-14T19:18:41.232Z"
+  },
+  {
+    "id": "1763933237274",
+    "username": "bogambo_",
+    "email": "bogambo10@gmail.com",
+    "password": "$2a$10$6oZ8n49Q/5rIa9AGw9GxuOwDNJgCojVvwiGY3z86.fOUITyUYYJVy",
+    "createdAt": "2025-11-23T21:27:17.274Z"
   }
 ]

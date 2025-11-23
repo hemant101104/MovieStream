@@ -41,8 +41,8 @@
     "participants": [],
     "currentVideo": null,
     "videoState": {
-      "playing": true,
-      "currentTime": 70.085857,
+      "playing": false,
+      "currentTime": 4.362277,
       "url": null
     },
     "createdAt": "2025-07-14T19:19:01.100Z"
@@ -222,5 +222,21 @@
       "url": null
     },
     "createdAt": "2025-07-23T18:47:38.107Z"
+  },
+  {
+    "id": "1763933259159",
+    "name": "bogambo",
+    "code": "V3IM2W",
+    "hostId": "1763933237274",
+    "hostUsername": "bogambo_",
+    "isPrivate": false,
+    "participants": [],
+    "currentVideo": null,
+    "videoState": {
+      "playing": false,
+      "currentTime": 4.843582,
+      "url": null
+    },
+    "createdAt": "2025-11-23T21:27:39.159Z"
   }
 ]
